@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+    background-color: aliceblue;
+}
+.container {
+	width: 80%;
+	margin: auto;
+    display: flex;
+}
+.login-form {
+    padding: 10%;
+    justify-content: center;
+    
+}
