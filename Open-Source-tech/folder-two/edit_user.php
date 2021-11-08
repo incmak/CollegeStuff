@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($result);
     </head>
     <body>
     <form action='' method='POST'>
-        ID <input type='text' name='n_id' value='$id' disabled>
+        ID <input type='text' name='n_id' value='$id' readonly>
         Name <input type='text' name='n_name' value='$name'>
         Email <input type='text' name='n_email' value='$email'>
         Phone <input type='text' name='n_phone' value='$phone'>

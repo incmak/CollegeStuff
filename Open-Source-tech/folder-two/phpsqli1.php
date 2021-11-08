@@ -39,7 +39,9 @@ while($row = mysqli_fetch_array($result)){
     ."<td>". "<a href='edit_user.php?id=$id'>Edit</a>"."</th>"
     ."</tr>";
 }
-echo "</table>
+echo "
+<tr> <td> <a href='update_all.php'>Update All </a></td></tr>
+</table>
 
 </body>
 </html>
