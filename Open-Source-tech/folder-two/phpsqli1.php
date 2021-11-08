@@ -31,12 +31,12 @@ while($row = mysqli_fetch_array($result)){
     $email = $row['email'];
     $country = $row['country'];
     echo"<tr>" 
-    ."<th>". $id."</th>" 
-    ."<th>". $name."</th>" 
-    ."<th>". $phone."</th>" 
-    ."<th>". $email."</th>" 
-    ."<th>". $country."</th>"
-    ."<th>". "<a href='edit_user.php?id=$id'>Edit</a>"."</th>"
+    ."<td>". $id."</td>" 
+    ."<td>". $name."</td>" 
+    ."<td>". $phone."</td>" 
+    ."<td>". $email."</td>" 
+    ."<td>". $country."</td>"
+    ."<td>". "<a href='edit_user.php?id=$id'>Edit</a>"."</th>"
     ."</tr>";
 }
 echo "</table>
