@@ -3,7 +3,7 @@ include 'connection.php';
 if (!$con) die("connection NOT MADE");
 $query = "select * from users";
 $result = mysqli_query($con,$query);
-echo "
+?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -22,28 +22,26 @@ echo "
         <th>Country</th>
         <th>Edit</th>
         </tr>
-";
-
+<?php
 while($row = mysqli_fetch_array($result)){
     $id = $row['id'];
     $name = $row['name'];
     $phone = $row['phone'];
     $email = $row['email'];
     $country = $row['country'];
-    echo"<tr>" 
-    ."<td>". $id."</td>" 
-    ."<td>". $name."</td>" 
-    ."<td>". $phone."</td>" 
-    ."<td>". $email."</td>" 
-    ."<td>". $country."</td>"
-    ."<td>". "<a href='edit_user.php?id=$id'>Edit</a>"."</th>"
-    ."</tr>";
+    ?>
+    <tr> 
+    <td> <?php echo $id ?> </td> 
+    <td> <?php echo $name ?> </td> 
+    <td> <?php echo $phone ?></td> 
+    <td> <?php echo $email ?></td> 
+    <td> <?php echo $country ?></td>
+    <td> <a href='edit_user.php?id=<?php echo $id ?>'>Edit</a></th>
+    </tr>
+    <?php
 }
-echo "
+?>
 <tr> <td> <a href='update_all.php'>Update All </a></td></tr>
 </table>
-
 </body>
 </html>
-";
-?>
