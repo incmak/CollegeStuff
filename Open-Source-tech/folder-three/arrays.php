@@ -55,4 +55,12 @@
 
     //Access elements of multidimensional array
     print_r($arr4);
+
+    //combining arrays
+    $key = [1,2,3,4,5];
+    $values = ["orange","banana","Mnago","apple","grapes"];
+    $comb = array_combine($key,$values);
+    foreach($comb as $c => $cs) {
+    echo "<br>". $c ."=>". $cs ;
+    }
 ?>
